@@ -73,12 +73,13 @@ function clean (
 
         let val = this.value
         if (val === undefined) return
-
+        
         let p
 
         // Filter out props if necessary
         if (
           (cleanOptions.filter === true && !ss.allowsKey(gKey)) ||
+          (cleanOptions.removeNulls && val == null) 
           (cleanOptions.removeNullsFromArrays === true && this.isArrayItem && val === null)
         ) {
           // XXX Special handling for $each; maybe this could be made nicer
