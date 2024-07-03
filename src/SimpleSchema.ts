@@ -99,6 +99,7 @@ class SimpleSchema {
     'mutate',
     'removeEmptyStrings',
     'removeNullsFromArrays',
+    'removeNulls',
     'trimStrings'
   ])
 
@@ -113,6 +114,8 @@ class SimpleSchema {
       filter: true,
       getAutoValues: true,
       removeEmptyStrings: true,
+      
+      removeNulls: false,
       removeNullsFromArrays: false,
       trimStrings: true
     },
